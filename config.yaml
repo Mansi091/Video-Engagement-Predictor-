@@ -1,0 +1,41 @@
+data:
+  movielens_url: https://files.grouplens.org/datasets/movielens/ml-latest-small.zip
+  raw_dir: data/raw
+  processed_dir: data/processed
+  video_dir: data/raw/videos
+  engagement_threshold: 4.0
+  seed: 42
+  max_users: 500
+  max_ratings: 5000
+
+videos:
+  sample_urls:
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4
+    - https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4
+  frames_per_video: 8
+  frame_interval_sec: 2.0
+
+clip:
+  model_name: openai/clip-vit-base-patch32
+  batch_size: 8
+  embedding_dim: 512
+
+model:
+  hidden_dim: 128
+  dropout: 0.3
+  epochs: 20
+  batch_size: 256
+  learning_rate: 0.001
+  val_fraction: 0.2
+
+experiments:
+  output_dir: experiments/results
+  run_ablation: true

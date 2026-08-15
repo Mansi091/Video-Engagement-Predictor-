@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+data/raw/movielens/
+data/raw/videos/*.mp4
+data/processed/*.parquet
+data/processed/*.csv
+experiments/results/*
+!experiments/results/.gitkeep
+*.pt
+.DS_Store
